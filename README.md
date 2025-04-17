@@ -36,26 +36,36 @@ project-root/
 ## 📆 ขั้นตอนการใช้งาน (Step-by-step)
 
 ### 1. ติดตั้ง dependency
-```bash
+```Terminal
 yarn install
 ```
 
 ### 2. ตั้งค่าการเชื่อมกับเครือข่าย Holesky
 สร้างไฟล์ `.env`:
 ```env
-CONTRACT_ADDRESS=0xYourDeployedAddressHere
+# RPC URL for Holesky testnet
+VITE_RPC_URL=https://eth-holesky.g.alchemy.com/v2/O7XZuPCCBG6u__QHM8TRO1LT0X8Bw0G7
+
+# Private key for deploying the contract
+PRIVATE_KEY=e4f5ea28bf194a1a759ceb3c032777f72631bfb5a47233ee502baa48c301f1ea
+
+# Contract address (will be generated after deployment)
+VITE_NEXT_PUBLIC_CONTRACT_ADDRESS=""
+
+# Mint price for the NFT (in ETH)
+VITE_NEXT_PUBLIC_MINT_PRICE="0.001"
 ```
 
 ### 3. Deploy Contract ใหม่ (ถ้าต้องการ Reset การถือ NFT)
-```bash
-npx hardhat run scripts/deploy.ts --network holesky
+```Terminal
+yarn deploy:holesky
 ```
 - ใช้ Hardhat version: `2.23.0`
 - ใช้ ethers: `5.8.0`
 - Deploy เสร็จแล้วนำ `address` มาใส่ใน `.env`
 
 ### 4. Start Frontend
-```bash
+```Terminal
 yarn dev
 ```
 เปิดที่ [http://localhost:8080](http://localhost:8080)
