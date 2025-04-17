@@ -63,7 +63,7 @@ const VaultPage = () => {
                 </p>
                 <Button asChild className="w-full bg-vault-gradient hover:opacity-90">
                   <a href="https://github.com/Fouxth/Vault-Key/blob/main/README.md" target="_blank" rel="noreferrer">
-                    View README
+                    View README.md
                   </a>
                 </Button>
               </CardContent>
