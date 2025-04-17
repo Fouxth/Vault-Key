@@ -62,8 +62,8 @@ const VaultPage = () => {
                   Access our confidential whitepaper with detailed analysis and future roadmap.
                 </p>
                 <Button asChild className="w-full bg-vault-gradient hover:opacity-90">
-                  <a href="https://drive.google.com/file/d/1UUhfgkv5feVNQJk23OamxaEONXyRsPTl/view?usp=sharing" download>
-                    Download README
+                  <a href="https://github.com/Fouxth/Vault-Key/blob/main/README.md" target="_blank" rel="noreferrer">
+                    View README
                   </a>
                 </Button>
               </CardContent>
