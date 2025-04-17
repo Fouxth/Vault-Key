@@ -103,8 +103,15 @@ yarn deploy:holesky
 
 ## 💼 ผู้พัฒนา
 **ชื่อโปรเจกต์:** Secret Society Vault Access NFT
+<<<<<<< HEAD
 **นักพัฒนา** Fouxth
 **เทคโนโลยี:** React + TypeScript + Solidity + Hardhat + Tailwind + Vite
 
 ---
 
+=======
+**นักพัฒนา:** Fouxth
+**เทคโนโลยี:** React + TypeScript + Solidity + Hardhat + Tailwind + Vite
+
+---
+>>>>>>> 6fc656f5 (V2)
