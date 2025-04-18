@@ -11,7 +11,7 @@ contract VaultKeyNFT is ERC721, ERC721Enumerable, Ownable {
     using Strings for uint256;
 
     uint256 private _nextTokenId;
-    uint256 public mintPrice = 1 ether;
+    uint256 public mintPrice = 0.01 ether;
     uint256 public maxTokens = 1000;
     string public baseURI;
     

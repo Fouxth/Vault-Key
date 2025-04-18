@@ -8,11 +8,11 @@ import { useToast } from "@/components/ui/use-toast"
 // ABI for the VaultKeyNFT contract
 const vaultKeyABI = [
   "function mint() public payable",
+  "function mintPrice() public view returns (uint256)",
   "function hasAccess(address user) public view returns (bool)",
   "function balanceOf(address owner) public view returns (uint256)",
   "function tokenURI(uint256 tokenId) public view returns (string memory)",
   "function ownerOf(uint256 tokenId) public view returns (address)",
-  "function mintPrice() public view returns (uint256)",
   "function maxTokens() public view returns (uint256)",
   "event Transfer(address indexed from, address indexed to, uint256 indexed tokenId)",
 ]
@@ -96,9 +96,12 @@ export const useVaultContract = () => {
       setIsMinting(true)
 
       const price = await contract.mintPrice()
+      console.log("💰 Mint price (wei):", price.toString())
+      console.log("💰 Mint price (ether):", ethers.utils.formatEther(price))
 
-      const tx = await contract.mint({ value: price })
-
+      const tx = await contract.mint({
+        value: price.toString(),
+      })
       toast({
         title: "Minting NFT",
         description: "Your transaction is being processed...",
@@ -116,6 +119,7 @@ export const useVaultContract = () => {
       })
     } catch (error: any) {
       console.error("Error minting NFT:", error)
+      console.error("Error minting NFT:", error?.message || error)
       toast({
         title: "Minting Failed",
         description: error.message?.includes("insufficient funds")
