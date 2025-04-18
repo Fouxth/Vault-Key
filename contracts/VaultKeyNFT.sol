@@ -54,6 +54,10 @@ contract VaultKeyNFT is ERC721, ERC721Enumerable, Ownable {
         uint256 balance = address(this).balance;
         payable(owner()).transfer(balance);
     }
+
+    function contractBalance() public view returns (uint256) {
+        return address(this).balance;
+    }
     
     function setMintPrice(uint256 _mintPrice) public onlyOwner {
         mintPrice = _mintPrice;
