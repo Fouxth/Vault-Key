@@ -53,7 +53,7 @@ PRIVATE_KEY=e4f5ea28bf194a1a759ceb3c032777f72631bfb5a47233ee502baa48c301f1ea
 VITE_NEXT_PUBLIC_CONTRACT_ADDRESS=""
 
 # Mint price for the NFT (in ETH)
-VITE_NEXT_PUBLIC_MINT_PRICE="0.001"
+VITE_NEXT_PUBLIC_MINT_PRICE="1"
 ```
 
 ### 3. Deploy Contract ใหม่ (ถ้าต้องการ Reset การถือ NFT)

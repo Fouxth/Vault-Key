@@ -4,7 +4,7 @@ import { Shield, Wallet, Lock } from "lucide-react"
 
 const Index = () => {
   // Define the mint price with a fallback
-  const mintPrice = import.meta.env.NEXT_PUBLIC_MINT_PRICE || "0.001"
+  const mintPrice = import.meta.env.NEXT_PUBLIC_MINT_PRICE || "1"
 
   return (
     <div className="min-h-screen flex flex-col">

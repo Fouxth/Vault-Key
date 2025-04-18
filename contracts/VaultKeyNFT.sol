@@ -11,7 +11,7 @@ contract VaultKeyNFT is ERC721, ERC721Enumerable, Ownable {
     using Strings for uint256;
 
     uint256 private _nextTokenId;
-    uint256 public mintPrice = 0.001 ether;
+    uint256 public mintPrice = 1 ether;
     uint256 public maxTokens = 1000;
     string public baseURI;
     
@@ -53,10 +53,6 @@ contract VaultKeyNFT is ERC721, ERC721Enumerable, Ownable {
     function withdraw() public onlyOwner {
         uint256 balance = address(this).balance;
         payable(owner()).transfer(balance);
-    }
-
-    function contractBalance() public view returns (uint256) {
-        return address(this).balance;
     }
     
     function setMintPrice(uint256 _mintPrice) public onlyOwner {
