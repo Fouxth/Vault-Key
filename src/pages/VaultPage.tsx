@@ -106,7 +106,7 @@ const VaultPage = () => {
                   Exclusive access to our special guest's content and private sessions.
                 </p>
                 <Button asChild className="w-full bg-vault-gradient hover:opacity-90">
-                  <a href="https://www.tiktok.com" target="_blank" rel="noreferrer">
+                  <a href="https://www.tiktok.com/@it_spu" target="_blank" rel="noreferrer">
                     Access Now
                   </a>
                 </Button>
