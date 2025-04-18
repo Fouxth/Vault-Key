@@ -108,10 +108,3 @@ yarn deploy:holesky
 **เทคโนโลยี:** React + TypeScript + Solidity + Hardhat + Tailwind + Vite
 
 ---
-
-=======
-**นักพัฒนา:** Fouxth
-**เทคโนโลยี:** React + TypeScript + Solidity + Hardhat + Tailwind + Vite
-
----
->>>>>>> 6fc656f5 (V2)
