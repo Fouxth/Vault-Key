@@ -118,7 +118,6 @@ export const useVaultContract = () => {
         description: "Your Vault Key NFT has been minted!",
       })
     } catch (error: any) {
-      console.error("Error minting NFT:", error)
       console.error("Error minting NFT:", error?.message || error)
       toast({
         title: "Minting Failed",
